@@ -1,0 +1,22 @@
+[
+  {
+    "TimeSpan": "Einzelfahrt",
+    "Zone": "100",
+    "PriceInEURCents": 240
+  },
+  {
+    "TimeSpan": "Tageskarte",
+    "Zone": "100",
+    "PriceInEURCents": 580
+  },
+  {
+    "TimeSpan": "Wochenkarte",
+    "Zone": "100",
+    "PriceInEURCents": 1710
+  },
+  {
+    "TimeSpan": "Monatskarte",
+    "Zone": "100",
+    "PriceInEURCents": 5100
+  }
+]

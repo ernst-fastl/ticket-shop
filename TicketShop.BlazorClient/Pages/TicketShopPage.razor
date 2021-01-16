@@ -1,0 +1,33 @@
+﻿@page "/ticketshop/{CityName}"
+
+<h1>Tickets für @CityName kaufen</h1>
+
+<p>Hier können Sie Tickets für verschiedene Zeiträume im Stadtgebiet von @CityName kaufen:</p>
+
+@if (_tickets == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Zeitraum</th>
+                <th>Zone</th>
+                <th>Preis</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var ticket in _tickets)
+            {
+                <tr>
+                    <td>@ticket.TimeSpan</td>
+                    <td>@ticket.Zone</td>
+                    <td>@ticket.Price</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "TimeSpan": "Tageskarte",
+    "Zone": "Graz",
+    "PriceInEURCents": 550
+  },
+  {
+    "TimeSpan": "72 Stunden",
+    "Zone": "Graz",
+    "PriceInEURCents": 1290
+  },
+  {
+    "TimeSpan": "Wochenkarte",
+    "Zone": "Graz",
+    "PriceInEURCents": 1580
+  },
+  {
+    "TimeSpan": "Monatskarte",
+    "Zone": "Graz",
+    "PriceInEURCents": 5220
+  }
+]

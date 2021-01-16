@@ -1,0 +1,12 @@
+[
+  {
+    "TimeSpan": "Einzelfahrt",
+    "Zone": "OÖVV Linz",
+    "PriceInEURCents": 250
+  },
+  {
+    "TimeSpan": "24 Stunden",
+    "Zone": "OÖVV Linz",
+    "PriceInEURCents": 500
+  }
+]
