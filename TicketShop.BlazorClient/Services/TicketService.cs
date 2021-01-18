@@ -14,10 +14,12 @@ namespace TicketShop.BlazorClient.Services
         {
             _httpClient = httpClient;
         }
+
         public async Task<IEnumerable<Ticket>> GetAllTicketsForCityName(string cityName)
         {
             return await JsonSerializer.DeserializeAsync<IEnumerable<Ticket>>
-                (await _httpClient.GetStreamAsync($"api/tickets/{cityName}.json"), new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
+            (await _httpClient.GetStreamAsync($"api/tickets/{cityName}.json"),
+                new JsonSerializerOptions {PropertyNameCaseInsensitive = true});
         }
     }
 }

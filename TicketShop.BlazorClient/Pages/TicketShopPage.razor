@@ -6,28 +6,35 @@
 
 @if (_tickets == null)
 {
-    <p><em>Loading...</em></p>
+    <p>
+        <em>Loading...</em>
+    </p>
 }
 else
 {
     <table class="table">
         <thead>
-            <tr>
-                <th>Zeitraum</th>
-                <th>Zone</th>
-                <th>Preis</th>
-                <th></th>
-            </tr>
+        <tr>
+            <th>Zeitraum</th>
+            <th>Zone</th>
+            <th>Preis</th>
+            <th></th>
+        </tr>
         </thead>
         <tbody>
-            @foreach (var ticket in _tickets)
-            {
-                <tr>
-                    <td>@ticket.TimeSpan</td>
-                    <td>@ticket.Zone</td>
-                    <td>@ticket.Price</td>
-                </tr>
-            }
+        @foreach (var ticket in _tickets)
+        {
+            <tr>
+                <td>@ticket.TimeSpan</td>
+                <td>@ticket.Zone</td>
+                <td>@ticket.Price</td>
+                <td>
+                    <button @onclick="@(_ => AddTicketToShoppingCart(ticket))" class="btn btn-primary table-btn">
+                        zum Warenkorb hinzufügen
+                    </button>
+                </td>
+            </tr>
+        }
         </tbody>
     </table>
 }

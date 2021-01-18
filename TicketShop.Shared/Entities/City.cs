@@ -1,8 +1,8 @@
-﻿namespace TicketShop.Shared.Entities
+﻿// ReSharper disable UnusedAutoPropertyAccessor.Global
+namespace TicketShop.Shared.Entities
 {
     public class City
     {
-        public string Name { get; set; }
-        // public Ticket[] Tickets { get; set; }
+        public string Name { get; init; }
     }
 }

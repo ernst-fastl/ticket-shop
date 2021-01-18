@@ -1,0 +1,42 @@
+﻿@page "/shoppingcart"
+
+<h1>Ihr Einkaufswagen</h1>
+
+<p>Folgende Tickets sind in ihrem Einkaufswagen:</p>
+
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Zeitraum</th>
+        <th>Zone</th>
+        <th>Preis</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var ticket in Tickets)
+    {
+        <tr>
+            <td>@ticket.TimeSpan</td>
+            <td>@ticket.Zone</td>
+            <td>@ticket.Price</td>
+            <td>
+                <button @onclick="@(_ => RemoveTicketFromShoppingCart(ticket))" class="btn btn-primary table-btn">
+                    aus Warenkorb entfernen
+                </button>
+            </td>
+        </tr>
+    }
+    <tr>
+        <td></td>
+        <td>Summe</td>
+        <td>@TotalPrice</td>
+        <td>
+            <button class="btn btn-primary table-btn">
+                Tickets kaufen
+            </button>
+        </td>
+    </tr>
+    </tbody>
+</table>
